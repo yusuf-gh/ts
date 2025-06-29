@@ -151,3 +151,31 @@ function listBooks(books: Array<Books>): string {
 //--------------------------------------------------------------------------------------------------------------------
 
 
+function createCounter(n: number): () => number {
+    let current = n;
+    return function (): number {
+        return current++;
+    };
+}
+function runCalls(n: number, calls: string[]): number[] {
+  const counter = createCounter(n);
+  const result: number[] = [];
+
+  for (const c of calls) {
+    if (c === "call") {
+      result.push(counter());
+    }
+  }
+
+  return result;
+}
+
+// console.log(runCalls(10, ["call", "call", "call"])); 
+
+
+
+/////////////////////////////
+// [ 10, 11, 12 ]          //
+/////////////////////////////
+
+

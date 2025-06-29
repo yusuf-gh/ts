@@ -27,7 +27,7 @@ function buy(price, myCash) {
 // console.log(buy(price, myCash));
 ///////////////////////////////////////////////////////////////////////
 // Спасибо за покупку, вы заплатили 99.8$, и у вас осталось 30.20$.  //
-// Хорошего дня!                                                     //   
+// Хорошего дня!                                                     //
 ///////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------------------------------------------------------
 var isPremium = false;
@@ -72,4 +72,28 @@ function listBooks(books) {
     });
     return result;
 }
-console.log(listBooks(bookList));
+// console.log(listBooks(bookList));
+///////////////////////////////
+// 1: Что то там крч - 213   //
+// 2: Что то - 313           //
+// 3: там крч - 156          //
+///////////////////////////////
+//--------------------------------------------------------------------------------------------------------------------
+function createCounter(n) {
+    var current = n;
+    return function () {
+        return current++;
+    };
+}
+function runCalls(n, calls) {
+    var counter = createCounter(n);
+    var result = [];
+    for (var _i = 0, calls_1 = calls; _i < calls_1.length; _i++) {
+        var c = calls_1[_i];
+        if (c === "call") {
+            result.push(counter());
+        }
+    }
+    return result;
+}
+console.log(runCalls(10, ["call", "call", "call"]));
