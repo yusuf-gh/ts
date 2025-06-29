@@ -21,6 +21,7 @@ function greeting(username: string, age: number): string {
 
 //--------------------------------------------------------------------------------------------------------------------
 
+
 const price: number = 99.80;
 const myCash: number = 130;
 function buy(price: number, myCash: number): string {
@@ -84,6 +85,7 @@ function isAuthentificated(userToken: string | null): string {
 
 //--------------------------------------------------------------------------------------------------------------------
 
+
 interface Book {
     title: string;
     pages: number;
@@ -143,5 +145,9 @@ function listBooks(books: Array<Books>): string {
 // 2: Что то - 313           //
 // 3: там крч - 156          //
 ///////////////////////////////
+
+
+
+//--------------------------------------------------------------------------------------------------------------------
 
 
